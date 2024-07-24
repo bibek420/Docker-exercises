@@ -1,0 +1,38 @@
+root@ubuntu:/home/aatrox# docker ps -a
+CONTAINER ID   IMAGE         COMMAND                  CREATED       STATUS                         PORTS     NAMES
+98405134eeaf   nginx         "/docker-entrypoint.…"   5 hours ago   Exited (0) About an hour ago             eloquent_swirles
+1df26ea7e5ab   hello-world   "/hello"                 5 hours ago   Exited (0) 5 hours ago                   jolly_curran
+dfc16e7c876b   nginx         "/docker-entrypoint.…"   5 hours ago   Exited (0) 5 hours ago                   busy_shaw
+root@ubuntu:/home/aatrox#
+root@ubuntu:/home/aatrox# docker container stop eloquent_swirles jolly_curran busy_shaw
+eloquent_swirles
+jolly_curran
+busy_shaw
+root@ubuntu:/home/aatrox# docker container rm --force eloquent_swirles jolly_curran busy_shaw
+eloquent_swirles
+jolly_curran
+busy_shaw
+root@ubuntu:/home/aatrox# docker image ls
+REPOSITORY    TAG       IMAGE ID       CREATED         SIZE
+nginx         latest    a72860cb95fd   4 weeks ago     188MB
+hello-world   latest    d2c94e258dcb   14 months ago   13.3kB
+root@ubuntu:/home/aatrox# docker image rm a7 d2
+Untagged: nginx:latest
+Untagged: nginx@sha256:05ab1728068284cbd42d54554fa2b69a3d6334adafccf2e70cf20925d7d55e90
+Deleted: sha256:a72860cb95fd59e9c696c66441c64f18e66915fa26b249911e83c3854477ed9a
+Deleted: sha256:1188c692bee9694c47db34046023dbd938d88f303f216ef689863741b2d1a900
+Deleted: sha256:3eefccfd7e5fd8bbb2bd982509dc79206b056f22dd2b14553951a743833b0d09
+Deleted: sha256:5234252bfd2bba1548a4998869e9a01aedfe3b319ce61acbe98f8aec223640e7
+Deleted: sha256:b292d631e6ca5af8269dc2cf3ec47be1f9faa0865b2aaa794daa2b8c25ea8cb4
+Deleted: sha256:beda8840654459fe0efc1cd0bcae6a00b65b469cc999ebc41608b53c51fb93b4
+Deleted: sha256:7a69d5090b2e7d873a365c81c590b2e6b87a702178b22b3c32c50d35eb7616fc
+Deleted: sha256:e0781bc8667fb5ebf954df4ae52997f6f5568ec9f07e21e5db7c9d324ed41e1f
+Untagged: hello-world:latest
+Untagged: hello-world@sha256:1408fec50309afee38f3535383f5b09419e6dc0925bc69891e79d84cc4cdcec6
+Deleted: sha256:d2c94e258dcb3c5ac2798d32e1249e42ef01cba4841c2234249495f87264ac5a
+Deleted: sha256:ac28800ec8bb38d5c35b49d45a6ac4777544941199075dff8c4eb63e093aa81e
+root@ubuntu:/home/aatrox# docker ps -a
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+root@ubuntu:/home/aatrox# docker image ls
+REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
+root@ubuntu:/home/aatrox#
